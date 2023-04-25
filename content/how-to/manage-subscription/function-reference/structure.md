@@ -98,3 +98,23 @@ Replaces the value of event attribe or event data path.
 ```json
 {"command":["replace","$.data.name","newValue"]}
 ```
+
+## duplicate
+
+Copies the value of event attribe or event data path and assign it to a new path.
+
+### definition
+
+["duplicate", path, value]
+
+### Parameters
+
+- `"duplicate"` – The name of the function.
+- `path` – The name of an existing event attribe or event data path. If the key no exist, an error will be reported. The param must be event json path.
+- `value` – The new value of event attribe or event data path. The param support all param types.
+
+### Example
+
+```json
+{"command":["duplicate","$.data.name","newValue"]}
+```
